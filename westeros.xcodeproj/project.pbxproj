@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBE50C14202CE4CB006D3C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE50C13202CE4CB006D3C34 /* AppDelegate.swift */; };
+		EBE50C16202CE4CB006D3C34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE50C15202CE4CB006D3C34 /* ViewController.swift */; };
+		EBE50C19202CE4CB006D3C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE50C17202CE4CB006D3C34 /* Main.storyboard */; };
+		EBE50C1B202CE4CB006D3C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE50C1A202CE4CB006D3C34 /* Assets.xcassets */; };
+		EBE50C1E202CE4CB006D3C34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE50C1C202CE4CB006D3C34 /* LaunchScreen.storyboard */; };
+		EBE50C29202CE4CB006D3C34 /* westerosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE50C28202CE4CB006D3C34 /* westerosTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBE50C25202CE4CB006D3C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE50C08202CE4CB006D3C34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBE50C0F202CE4CB006D3C34;
+			remoteInfo = westeros;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBE50C10202CE4CB006D3C34 /* westeros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = westeros.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE50C13202CE4CB006D3C34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBE50C15202CE4CB006D3C34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBE50C18202CE4CB006D3C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBE50C1A202CE4CB006D3C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBE50C1D202CE4CB006D3C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBE50C1F202CE4CB006D3C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE50C24202CE4CB006D3C34 /* westerosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = westerosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE50C28202CE4CB006D3C34 /* westerosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = westerosTests.swift; sourceTree = "<group>"; };
+		EBE50C2A202CE4CB006D3C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBE50C0D202CE4CB006D3C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE50C21202CE4CB006D3C34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBE50C07202CE4CB006D3C34 = {
+			isa = PBXGroup;
+			children = (
+				EBE50C12202CE4CB006D3C34 /* westeros */,
+				EBE50C27202CE4CB006D3C34 /* westerosTests */,
+				EBE50C11202CE4CB006D3C34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBE50C11202CE4CB006D3C34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBE50C10202CE4CB006D3C34 /* westeros.app */,
+				EBE50C24202CE4CB006D3C34 /* westerosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBE50C12202CE4CB006D3C34 /* westeros */ = {
+			isa = PBXGroup;
+			children = (
+				EBE50C13202CE4CB006D3C34 /* AppDelegate.swift */,
+				EBE50C15202CE4CB006D3C34 /* ViewController.swift */,
+				EBE50C17202CE4CB006D3C34 /* Main.storyboard */,
+				EBE50C1A202CE4CB006D3C34 /* Assets.xcassets */,
+				EBE50C1C202CE4CB006D3C34 /* LaunchScreen.storyboard */,
+				EBE50C1F202CE4CB006D3C34 /* Info.plist */,
+			);
+			path = westeros;
+			sourceTree = "<group>";
+		};
+		EBE50C27202CE4CB006D3C34 /* westerosTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBE50C28202CE4CB006D3C34 /* westerosTests.swift */,
+				EBE50C2A202CE4CB006D3C34 /* Info.plist */,
+			);
+			path = westerosTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBE50C0F202CE4CB006D3C34 /* westeros */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE50C2D202CE4CB006D3C34 /* Build configuration list for PBXNativeTarget "westeros" */;
+			buildPhases = (
+				EBE50C0C202CE4CB006D3C34 /* Sources */,
+				EBE50C0D202CE4CB006D3C34 /* Frameworks */,
+				EBE50C0E202CE4CB006D3C34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = westeros;
+			productName = westeros;
+			productReference = EBE50C10202CE4CB006D3C34 /* westeros.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBE50C23202CE4CB006D3C34 /* westerosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE50C30202CE4CB006D3C34 /* Build configuration list for PBXNativeTarget "westerosTests" */;
+			buildPhases = (
+				EBE50C20202CE4CB006D3C34 /* Sources */,
+				EBE50C21202CE4CB006D3C34 /* Frameworks */,
+				EBE50C22202CE4CB006D3C34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBE50C26202CE4CB006D3C34 /* PBXTargetDependency */,
+			);
+			name = westerosTests;
+			productName = westerosTests;
+			productReference = EBE50C24202CE4CB006D3C34 /* westerosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBE50C08202CE4CB006D3C34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Hector Aguado";
+				TargetAttributes = {
+					EBE50C0F202CE4CB006D3C34 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EBE50C23202CE4CB006D3C34 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EBE50C0F202CE4CB006D3C34;
+					};
+				};
+			};
+			buildConfigurationList = EBE50C0B202CE4CB006D3C34 /* Build configuration list for PBXProject "westeros" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBE50C07202CE4CB006D3C34;
+			productRefGroup = EBE50C11202CE4CB006D3C34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBE50C0F202CE4CB006D3C34 /* westeros */,
+				EBE50C23202CE4CB006D3C34 /* westerosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBE50C0E202CE4CB006D3C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE50C1E202CE4CB006D3C34 /* LaunchScreen.storyboard in Resources */,
+				EBE50C1B202CE4CB006D3C34 /* Assets.xcassets in Resources */,
+				EBE50C19202CE4CB006D3C34 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE50C22202CE4CB006D3C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBE50C0C202CE4CB006D3C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE50C16202CE4CB006D3C34 /* ViewController.swift in Sources */,
+				EBE50C14202CE4CB006D3C34 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE50C20202CE4CB006D3C34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE50C29202CE4CB006D3C34 /* westerosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBE50C26202CE4CB006D3C34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBE50C0F202CE4CB006D3C34 /* westeros */;
+			targetProxy = EBE50C25202CE4CB006D3C34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBE50C17202CE4CB006D3C34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE50C18202CE4CB006D3C34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBE50C1C202CE4CB006D3C34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE50C1D202CE4CB006D3C34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBE50C2B202CE4CB006D3C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBE50C2C202CE4CB006D3C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBE50C2E202CE4CB006D3C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X28M3AJ5PU;
+				INFOPLIST_FILE = westeros/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haguado.westeros;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBE50C2F202CE4CB006D3C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X28M3AJ5PU;
+				INFOPLIST_FILE = westeros/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haguado.westeros;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EBE50C31202CE4CB006D3C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X28M3AJ5PU;
+				INFOPLIST_FILE = westerosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haguado.westerosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/westeros.app/westeros";
+			};
+			name = Debug;
+		};
+		EBE50C32202CE4CB006D3C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X28M3AJ5PU;
+				INFOPLIST_FILE = westerosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haguado.westerosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/westeros.app/westeros";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBE50C0B202CE4CB006D3C34 /* Build configuration list for PBXProject "westeros" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE50C2B202CE4CB006D3C34 /* Debug */,
+				EBE50C2C202CE4CB006D3C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE50C2D202CE4CB006D3C34 /* Build configuration list for PBXNativeTarget "westeros" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE50C2E202CE4CB006D3C34 /* Debug */,
+				EBE50C2F202CE4CB006D3C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE50C30202CE4CB006D3C34 /* Build configuration list for PBXNativeTarget "westerosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE50C31202CE4CB006D3C34 /* Debug */,
+				EBE50C32202CE4CB006D3C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBE50C08202CE4CB006D3C34 /* Project object */;
+}
