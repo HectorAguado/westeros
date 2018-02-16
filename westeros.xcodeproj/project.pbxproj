@@ -7,12 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB1BFCA320337C9D005578DA /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BFCA220337C9D005578DA /* UIViewController+Additions.swift */; };
+		EB1BFCA520338097005578DA /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BFCA420338097005578DA /* RepositoryTests.swift */; };
+		EB1BFCA720338185005578DA /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BFCA620338185005578DA /* Repository.swift */; };
+		EB5DF6C120362B96004D8746 /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5DF6BF20362B96004D8746 /* WikiViewController.swift */; };
+		EB5DF6C220362B96004D8746 /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5DF6C020362B96004D8746 /* WikiViewController.xib */; };
+		EB5DF6C520364529004D8746 /* HouseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5DF6C320364529004D8746 /* HouseListViewController.swift */; };
+		EB5DF6C620364529004D8746 /* HouseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5DF6C420364529004D8746 /* HouseListViewController.xib */; };
+		EB92FFC92032387A00511E1A /* codeIsComing.png in Resources */ = {isa = PBXBuildFile; fileRef = EB92FFC62032387A00511E1A /* codeIsComing.png */; };
+		EB92FFCA2032387A00511E1A /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB92FFC72032387A00511E1A /* lannister.jpg */; };
+		EB92FFCB2032387A00511E1A /* targaryenSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB92FFC82032387A00511E1A /* targaryenSmall.jpg */; };
+		EB92FFD020323A8800511E1A /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB92FFCE20323A8800511E1A /* HouseDetailViewController.swift */; };
+		EB92FFD120323A8800511E1A /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB92FFCF20323A8800511E1A /* HouseDetailViewController.xib */; };
 		EBE50C14202CE4CB006D3C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE50C13202CE4CB006D3C34 /* AppDelegate.swift */; };
-		EBE50C16202CE4CB006D3C34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE50C15202CE4CB006D3C34 /* ViewController.swift */; };
-		EBE50C19202CE4CB006D3C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE50C17202CE4CB006D3C34 /* Main.storyboard */; };
 		EBE50C1B202CE4CB006D3C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE50C1A202CE4CB006D3C34 /* Assets.xcassets */; };
 		EBE50C1E202CE4CB006D3C34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE50C1C202CE4CB006D3C34 /* LaunchScreen.storyboard */; };
-		EBE50C29202CE4CB006D3C34 /* westerosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE50C28202CE4CB006D3C34 /* westerosTests.swift */; };
+		EBE50C35202CF01B006D3C34 /* HouseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE50C34202CF01B006D3C34 /* HouseTest.swift */; };
+		EBE50C37202CF1C3006D3C34 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE50C36202CF1C3006D3C34 /* House.swift */; };
+		EBE50C39202CFE0B006D3C34 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE50C38202CFE0B006D3C34 /* Person.swift */; };
+		EBE50C3B202CFE44006D3C34 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE50C3A202CFE44006D3C34 /* PersonTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +39,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB1BFCA220337C9D005578DA /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		EB1BFCA420338097005578DA /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		EB1BFCA620338185005578DA /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		EB5DF6BF20362B96004D8746 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
+		EB5DF6C020362B96004D8746 /* WikiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WikiViewController.xib; sourceTree = "<group>"; };
+		EB5DF6C320364529004D8746 /* HouseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListViewController.swift; sourceTree = "<group>"; };
+		EB5DF6C420364529004D8746 /* HouseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseListViewController.xib; sourceTree = "<group>"; };
+		EB92FFC62032387A00511E1A /* codeIsComing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = codeIsComing.png; sourceTree = "<group>"; };
+		EB92FFC72032387A00511E1A /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
+		EB92FFC82032387A00511E1A /* targaryenSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryenSmall.jpg; sourceTree = "<group>"; };
+		EB92FFCE20323A8800511E1A /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
+		EB92FFCF20323A8800511E1A /* HouseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
 		EBE50C10202CE4CB006D3C34 /* westeros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = westeros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE50C13202CE4CB006D3C34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EBE50C15202CE4CB006D3C34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EBE50C18202CE4CB006D3C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBE50C1A202CE4CB006D3C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBE50C1D202CE4CB006D3C34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBE50C1F202CE4CB006D3C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBE50C24202CE4CB006D3C34 /* westerosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = westerosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBE50C28202CE4CB006D3C34 /* westerosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = westerosTests.swift; sourceTree = "<group>"; };
 		EBE50C2A202CE4CB006D3C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE50C34202CF01B006D3C34 /* HouseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTest.swift; sourceTree = "<group>"; };
+		EBE50C36202CF1C3006D3C34 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		EBE50C38202CFE0B006D3C34 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		EBE50C3A202CFE44006D3C34 /* PersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB1BFCA120337C58005578DA /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BFCA220337C9D005578DA /* UIViewController+Additions.swift */,
+			);
+			path = UIKitExtensions;
+			sourceTree = "<group>";
+		};
+		EB92FFCC2032390E00511E1A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EBE50C36202CF1C3006D3C34 /* House.swift */,
+				EBE50C38202CFE0B006D3C34 /* Person.swift */,
+				EB1BFCA620338185005578DA /* Repository.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EB92FFCD2032391A00511E1A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EB92FFC62032387A00511E1A /* codeIsComing.png */,
+				EB92FFC72032387A00511E1A /* lannister.jpg */,
+				EB92FFC82032387A00511E1A /* targaryenSmall.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		EB92FFD220323AC800511E1A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB92FFCE20323A8800511E1A /* HouseDetailViewController.swift */,
+				EB5DF6C320364529004D8746 /* HouseListViewController.swift */,
+				EB5DF6C420364529004D8746 /* HouseListViewController.xib */,
+				EB92FFCF20323A8800511E1A /* HouseDetailViewController.xib */,
+				EB5DF6BF20362B96004D8746 /* WikiViewController.swift */,
+				EB5DF6C020362B96004D8746 /* WikiViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		EBE50C07202CE4CB006D3C34 = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +144,11 @@
 		EBE50C12202CE4CB006D3C34 /* westeros */ = {
 			isa = PBXGroup;
 			children = (
+				EB1BFCA120337C58005578DA /* UIKitExtensions */,
+				EB92FFD220323AC800511E1A /* Controllers */,
+				EB92FFCC2032390E00511E1A /* Domain */,
+				EB92FFCD2032391A00511E1A /* Images */,
 				EBE50C13202CE4CB006D3C34 /* AppDelegate.swift */,
-				EBE50C15202CE4CB006D3C34 /* ViewController.swift */,
-				EBE50C17202CE4CB006D3C34 /* Main.storyboard */,
 				EBE50C1A202CE4CB006D3C34 /* Assets.xcassets */,
 				EBE50C1C202CE4CB006D3C34 /* LaunchScreen.storyboard */,
 				EBE50C1F202CE4CB006D3C34 /* Info.plist */,
@@ -90,8 +159,10 @@
 		EBE50C27202CE4CB006D3C34 /* westerosTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBE50C28202CE4CB006D3C34 /* westerosTests.swift */,
 				EBE50C2A202CE4CB006D3C34 /* Info.plist */,
+				EBE50C34202CF01B006D3C34 /* HouseTest.swift */,
+				EB1BFCA420338097005578DA /* RepositoryTests.swift */,
+				EBE50C3A202CFE44006D3C34 /* PersonTests.swift */,
 			);
 			path = westerosTests;
 			sourceTree = "<group>";
@@ -150,6 +221,7 @@
 					};
 					EBE50C23202CE4CB006D3C34 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = EBE50C0F202CE4CB006D3C34;
 					};
@@ -179,9 +251,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB92FFCA2032387A00511E1A /* lannister.jpg in Resources */,
+				EB5DF6C220362B96004D8746 /* WikiViewController.xib in Resources */,
+				EB92FFCB2032387A00511E1A /* targaryenSmall.jpg in Resources */,
+				EB5DF6C620364529004D8746 /* HouseListViewController.xib in Resources */,
+				EB92FFD120323A8800511E1A /* HouseDetailViewController.xib in Resources */,
+				EB92FFC92032387A00511E1A /* codeIsComing.png in Resources */,
 				EBE50C1E202CE4CB006D3C34 /* LaunchScreen.storyboard in Resources */,
 				EBE50C1B202CE4CB006D3C34 /* Assets.xcassets in Resources */,
-				EBE50C19202CE4CB006D3C34 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +276,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE50C16202CE4CB006D3C34 /* ViewController.swift in Sources */,
+				EB92FFD020323A8800511E1A /* HouseDetailViewController.swift in Sources */,
+				EBE50C39202CFE0B006D3C34 /* Person.swift in Sources */,
+				EBE50C37202CF1C3006D3C34 /* House.swift in Sources */,
+				EB1BFCA320337C9D005578DA /* UIViewController+Additions.swift in Sources */,
 				EBE50C14202CE4CB006D3C34 /* AppDelegate.swift in Sources */,
+				EB1BFCA720338185005578DA /* Repository.swift in Sources */,
+				EB5DF6C120362B96004D8746 /* WikiViewController.swift in Sources */,
+				EB5DF6C520364529004D8746 /* HouseListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE50C29202CE4CB006D3C34 /* westerosTests.swift in Sources */,
+				EBE50C35202CF01B006D3C34 /* HouseTest.swift in Sources */,
+				EBE50C3B202CFE44006D3C34 /* PersonTests.swift in Sources */,
+				EB1BFCA520338097005578DA /* RepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,14 +308,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EBE50C17202CE4CB006D3C34 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBE50C18202CE4CB006D3C34 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EBE50C1C202CE4CB006D3C34 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -384,12 +461,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X28M3AJ5PU;
 				INFOPLIST_FILE = westerosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haguado.westerosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/westeros.app/westeros";
@@ -401,6 +480,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X28M3AJ5PU;
 				INFOPLIST_FILE = westerosTests/Info.plist;
