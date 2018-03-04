@@ -33,9 +33,6 @@ class SeasonDetailViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = model.name.rawValue
-        setupUI()
-        syncModelWithView()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

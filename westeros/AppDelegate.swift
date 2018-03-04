@@ -33,10 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         houseListViewController = HouseListViewController(model: houses)
         seasonListViewController = SeasonListViewController(model: seasons)
         
-//        let lastSelectedHouse = houseListViewController!.lastSelectedHouse()
-//        let houseDetailViewController = HouseDetailViewController(model: lastSelectedHouse)
+        let lastSelectedHouse = houseListViewController!.lastSelectedHouse()
+        houseDetailViewController = HouseDetailViewController(model: lastSelectedHouse)
         
-        houseDetailViewController = HouseDetailViewController(model: houses.first!)
+//        houseDetailViewController = HouseDetailViewController(model: houses.first!)
         seasonDetailViewController = SeasonDetailViewController(model: seasons.first!)
         
         // Creamos combinador
@@ -66,40 +66,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = tabBarViewController
         }
         
-
-        
         // varios elementos de UI tienen un proxy .appearance() con muchos métodos para cambiar la apariencia
         UINavigationBar.appearance().backgroundColor = .red
         
-        
-        
-// Mostrando TableView
-
-        
-        // creamos la table
-        //let houseListViewController = HouseListViewController(model: houses)
-        // Asignamos el rootVC -> Indicamos QUÉ Queremos que se muestre
-        //window?.rootViewController = houseListViewController.wrappedInNavigation()
-
-// Monstrando TabBarController
-     //Forma 2
-        // Creamos los Combinadores
-/*        let tabBarViewController = UITabBarController()
-        tabBarViewController.viewControllers =
-            houses
-                .map {HouseDetailViewController(model: $0)}
-                .map {$0.wrappedInNavigation()}
-    //Forma 1
-         let controllers = houses.map{ house in
-         return HouseDetailViewController(model: house).wrappedInNavigation()
-         }
-         let tabBarViewController = UITabBarController()
-         tabBarViewController.viewControllers = controllers
-         
-        // Asignamos el rootVC -> Indicamos QUÉ Queremos que se muestre
-        window?.rootViewController = tabBarViewController
-*/
-       
         return true
     }
     
@@ -123,9 +92,9 @@ extension AppDelegate: UITabBarControllerDelegate{
                 return
             }
             if vc is SeasonListViewController{
-                splitViewController.viewControllers[1] = seasonDetailViewController.wrappedInNavigation()
-                window?.rootViewController = splitViewController
-                // window?.rootViewController?.showDetailViewController(seasonListViewController!, sender: self)
+//                splitViewController.viewControllers[1] = seasonDetailViewController
+//                window?.rootViewController = splitViewController
+                window?.rootViewController?.showDetailViewController(seasonDetailViewController.wrappedInNavigation(), sender: self)
             }
         }
     }
