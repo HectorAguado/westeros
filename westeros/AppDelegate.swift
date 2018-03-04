@@ -11,105 +11,122 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?   //debe ser var porque aqui ahora mismo tiene valor nil, y necesitamos cambiarlad. Si el tipo va a ser opcional, no tiene sentido que sea una constante
-
-
+    var window: UIWindow?
+    
+    let splitViewController = UISplitViewController()
+    var houseListViewController: HouseListViewController?
+    var seasonListViewController: SeasonListViewController?
+    var houseDetailViewController: HouseDetailViewController?
+    var seasonDetailViewController: SeasonDetailViewController?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)   //le damos el tamaño de nuestro dispositivo
-        window?.backgroundColor = .cyan  // swift usa la inferencia de tipos a sabe que es un UIColor, in enumerados podemos poner .valor directamente
-        
+        window?.backgroundColor = .cyan
         window?.makeKeyAndVisible()  // hay que hacerla visible
+        
+        //creamos los modelos (abstraemos el origen de los datos)
+        let houses = Repository.local.houses
+        let seasons = Repository.local.seasons
+        
+        // Inicializamos/Creamos los Controladores ( masterVC, detailVC)
+        houseListViewController = HouseListViewController(model: houses)
+        seasonListViewController = SeasonListViewController(model: seasons)
+        
+//        let lastSelectedHouse = houseListViewController!.lastSelectedHouse()
+//        let houseDetailViewController = HouseDetailViewController(model: lastSelectedHouse)
+        
+        houseDetailViewController = HouseDetailViewController(model: houses.first!)
+        seasonDetailViewController = SeasonDetailViewController(model: seasons.first!)
+        
+        // Creamos combinador
+        let tabBarViewController = UITabBarController()
+        tabBarViewController.viewControllers = [
+            houseListViewController!.wrappedInNavigation(),
+            seasonListViewController!.wrappedInNavigation()
+        ]
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            // Crear el UISplitVC y le asignamos los viewControllers (master y detail)
+            splitViewController.viewControllers = [
+                tabBarViewController.wrappedInNavigation(),
+                houseDetailViewController!.wrappedInNavigation(),
+                seasonDetailViewController!.wrappedInNavigation()
+            ]
+            // Asignamos delegados
+            tabBarViewController.delegate = self
+            houseListViewController?.delegate = houseDetailViewController
+            seasonListViewController?.delegate = seasonDetailViewController
+            
+            splitViewController.preferredDisplayMode = .allVisible
+            // Asignamos el rootVC -> Indicamos QUÉ Queremos que se muestre
+            window?.rootViewController = splitViewController
+        } else {
+            // Asignamos el rootVC -> Indicamos QUÉ Queremos que se muestre
+            window?.rootViewController = tabBarViewController
+        }
+        
 
-// DEFINITIVO
-        //creamos el modelo
-        let houses = Repository.local.houses  // abstraemos el origen de los datos
+        
+        // varios elementos de UI tienen un proxy .appearance() con muchos métodos para cambiar la apariencia
+        UINavigationBar.appearance().backgroundColor = .red
+        
+        
+        
+// Mostrando TableView
+
         
         // creamos la table
-        let houseListViewController = HouseListViewController(model: houses)
-//        let controllers = houses.map{ house in
-//            return HouseDetailViewController(model: house).wrappedInNavigation()
-//        }
-//        let tabBarViewController = UITabBarController()
-//        tabBarViewController.viewControllers = controllers
-//        window?.rootViewController = tabBarViewController
-        window?.rootViewController = houseListViewController.wrappedInNavigation()
+        //let houseListViewController = HouseListViewController(model: houses)
+        // Asignamos el rootVC -> Indicamos QUÉ Queremos que se muestre
+        //window?.rootViewController = houseListViewController.wrappedInNavigation()
 
-
-//        // Crear los Controladores
-////        let starkHouseViewController = HouseDetailViewController(model: starkHouse)
-////        let lannisterHouseViewControlller = HouseDetailViewController(model: lannisterHouse)
-//
-//        let houses = Repository.local.houses  // abstraemos el origen de los datos
-//        var controllers = [UIViewController]()
-//        for house in houses {
-//            controllers.append(HouseDetailViewController(model: house).wrappedInNavigation())
-//        }
-//
-//
-//
-////        var navigationControllers = [UINavigationController]()
-////        for controller in controllers {
-////            navigationControllers.append(controller.wrappedInNavigation())
-////        }
-//
-//        // Creamos los Combinadores
-//        let tabBarViewController = UITabBarController()
-//        tabBarViewController.viewControllers = [
-//            starkHouseViewController.wrappedInNavigation(),
-//            lannisterHouseViewControlller.wrappedInNavigation()
-//        ]
-//
-//
-//        /*
-//         tabBarViewController.viewControllers =
-//            houses
-//         .map {HouseDetailViewController(model: $0)}
-//         .map {wrappedInNavigation($0)}
-//
-//         */
-//
-//
-//        // Asignamos el rootVC -> Indicamos QUÉ Queremos que se muestre
-//        window?.rootViewController = tabBarViewController
-
-        
+// Monstrando TabBarController
+     //Forma 2
+        // Creamos los Combinadores
+/*        let tabBarViewController = UITabBarController()
+        tabBarViewController.viewControllers =
+            houses
+                .map {HouseDetailViewController(model: $0)}
+                .map {$0.wrappedInNavigation()}
+    //Forma 1
+         let controllers = houses.map{ house in
+         return HouseDetailViewController(model: house).wrappedInNavigation()
+         }
+         let tabBarViewController = UITabBarController()
+         tabBarViewController.viewControllers = controllers
+         
+        // Asignamos el rootVC -> Indicamos QUÉ Queremos que se muestre
+        window?.rootViewController = tabBarViewController
+*/
+       
         return true
     }
-
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
 }
 
+extension AppDelegate: UITabBarControllerDelegate{
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController){
+        // obtenemos el ListViewControler pulsado
+            //        let vc2 = (viewController as! UINavigationController).viewControllers.first
+        
+        let vc = viewController.childViewControllers[0]
+        
+        // Desempaquetamos, preguntamos si es de un tipo u otro y actualizamos el window.rootVC
+        guard let houseDetailViewController = houseDetailViewController else {return}
+        guard let seasonDetailViewController = seasonDetailViewController else {return}
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            if vc is HouseListViewController {
+                window?.rootViewController?.showDetailViewController(houseDetailViewController.wrappedInNavigation(), sender: self)
+                // splitViewController.viewControllers[1] = (houseDetailViewController?.wrappedInNavigation())!
+                return
+            }
+            if vc is SeasonListViewController{
+                splitViewController.viewControllers[1] = seasonDetailViewController.wrappedInNavigation()
+                window?.rootViewController = splitViewController
+                // window?.rootViewController?.showDetailViewController(seasonListViewController!, sender: self)
+            }
+        }
+    }
+}

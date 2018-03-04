@@ -6,13 +6,13 @@
 //  Copyright © 2018 Hector Aguado. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class Person {
     let name: String
     let house: House
     private let _alias: String?   //propiedades privadas, por convención, comienzan por _
-    
+    let photo: UIImage
     var alias: String {
         if let _alias = _alias {
             //existe y esta en _alias
@@ -23,10 +23,11 @@ final class Person {
         //equivale a return _alias ?? ""    --> Si existe _alias lo devuelve y si no devuelve ""
     }
     
-    init(name: String, alias: String? = nil, house: House){
+    init(name: String, alias: String? = nil, photo: UIImage, house: House){
         self.name = name
         _alias = alias
         self.house = house
+        self.photo = photo
     }
 //    init(name: String, house: House) {
 //        self.name = name
@@ -44,24 +45,34 @@ extension Person {
 
 // MARK: - Proxies
 extension Person {
-    var proxy: String {
+    var proxyForEquality: String {
         return "\(name) \(alias) \(house.name)"
+    }
+    var proxyforComparison: String {
+        return fullName
     }
 }
 // MARK: - Hashable
 extension Person: Hashable {
     var hashValue: Int {
-        return proxy.hashValue
+        return proxyForEquality.hashValue
     }
 }
 // MARK: - Equatable
 extension Person: Equatable {
     static func ==(lhs: Person, rhs: Person) -> Bool {
-        return lhs.proxy == rhs.proxy
+        return lhs.proxyForEquality == rhs.proxyForEquality
+    }
+}
+// MARK: - Comparable
+extension Person: Comparable {
+    static func <(lhs: Person, rhs: Person) -> Bool {
+        return lhs.proxyforComparison < rhs.proxyforComparison
     }
     
-    
+        
 }
+
 
 
 

@@ -15,8 +15,11 @@ class HouseDetailViewController: UIViewController {
     @IBOutlet weak var sigilImageView: UIImageView!
     @IBOutlet weak var wordsLabel: UILabel!
     
+    @IBOutlet weak var backgroundSigilImage: UIImageView!
+    
+    
     // MARK: - Properties
-    let model: House
+    var model: House
     
     // MARK: - Initialization
     init(model: House) {
@@ -38,29 +41,28 @@ class HouseDetailViewController: UIViewController {
         super.viewDidLoad()
       //  syncModelWithView()
     }
-    
-    // MARK: - Sync
-
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        title = model.name
         setupUI()
         syncModelWithView()
+        
     }
 
-    // Mark: - sync
+    // MARK: - Sync
     func syncModelWithView() {
         // Model -> View
         houseNameLabel.text = "House \(model.name)"
         sigilImageView.image = model.sigil.image
         wordsLabel.text = model.words
-        //        title = model.name
+        backgroundSigilImage.image = model.sigil.image
     }
     
     // Mark: - UI
     func setupUI(){
         let wikiButton = UIBarButtonItem(title: "Wiki", style: .plain, target: self, action: #selector(displayWiki))
-        navigationItem.rightBarButtonItem = wikiButton
+        let membersButton = UIBarButtonItem(title: "Members", style: .plain, target: self, action: #selector(displayMembers))
+        navigationItem.rightBarButtonItems = [wikiButton, membersButton]  // para más de un boton
     }
     //target indicamos donde buscar la acción
     // selector es un número que el sistema le asigna a cada una de nuestra funcion
@@ -72,31 +74,21 @@ class HouseDetailViewController: UIViewController {
         //hacemos push
         navigationController?.pushViewController(wikiViewController, animated: true)
     }
-    
-    
-    /*
-    override func viewDidAppear(_ animated: Bool) {
-        <#code#>
+    @objc func displayMembers(){
+        // creamos el VC
+        let memberListViewController = MemberListViewController(model: model.sortedMembers)
+        //hacemos push
+         navigationController?.pushViewController(memberListViewController, animated: true)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        <#code#>
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        <#code#>
-    }
-    
-    
- 
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        image = nill
-        // Dispose of any resources that can be recreated. Si no se libera memoria rapidamente tras recibir el warning,
-        //será el SO quien nos cerrará la app
-    }
+}
 
-*/
+// Al implementar HouseListViewControllerDelegate, escuchamos
+extension HouseDetailViewController: HouseListViewControllerDelegate {
+    func houseListViewController(_ vc: HouseListViewController, didSelectHouse house: House) {
+        self.model = house
+        syncModelWithView()
+    }
+    
+    
 }

@@ -10,6 +10,18 @@ import UIKit
 typealias Words = String
 typealias Members = Set<Person>   // no permite elementos duplicados, por eso nos obliga a implementar Equatable
 
+enum houseType: String {
+    case Arryn      = "Arryn"
+    case Baratheron = "Baratheon"
+    case Greyjoy    = "Greyjoy"
+    case Lannister  = "Lannister"
+    case Martell    = "Martell"
+    case Stark      = "Stark"
+    case Targaryen  = "Targaryen"
+    case Tully      = "Tully"
+    case Tyrell     = "Tyrell"
+}
+
 // MARK: - House
 final class House {
     let name: String
@@ -32,6 +44,9 @@ extension House {
         return _members.count
     }
     
+    var sortedMembers:[Person]{
+        return _members.sorted()
+    }
     func add(person: Person){
         guard person.house == self else {
             return
@@ -39,7 +54,7 @@ extension House {
         _members.insert(person)
     }
     
-    func add(persons: Person...) {  // ... significa que puede recibir uno 0 más elementos, separados por comas
+    func add(persons: Person...) {  // ... significa que puede recibir uno o más elementos, separados por comas
         //Aqui, persons es de tipo [Person]
 //        for person in persons{
 //            add(person: person)

@@ -32,9 +32,9 @@ class HouseTests: XCTestCase {
         lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido",
                                    url: URL(string: "http://awoiaf.westeros.org/index.php/House_Lannister")!)
         
-        robb = Person(name: "Robb", alias: "Joven lobo", house: starkHouse)
-        arya = Person(name: "Arya", house: starkHouse)
-        tyrion = Person(name: "Tyrion", alias: "El gnomo", house: lannisterHouse)
+        robb = Person(name: "Robb", alias: "Joven lobo", photo: #imageLiteral(resourceName: "robb.jpg"), house: starkHouse)
+        arya = Person(name: "Arya", photo: #imageLiteral(resourceName: "arya.jpg"), house: starkHouse)
+        tyrion = Person(name: "Tyrion", alias: "El gnomo", photo: #imageLiteral(resourceName: "tyrion-lannister-in-game-of-thrones-season-7.png"), house: lannisterHouse)
     }
     
     override func tearDown() {
@@ -69,8 +69,8 @@ class HouseTests: XCTestCase {
         
 //        starkHouse.add(person: tyrion)
 //        XCTAssertEqual(starkHouse.count, 2)
-        let cersei = Person(name: "Cersei", house: lannisterHouse)
-        let jaime  = Person(name: "Jaime", alias: "El Matarreyes", house: lannisterHouse)
+        let cersei = Person(name: "Cersei", photo: #imageLiteral(resourceName: "cersei-lannister-photos.jpg"), house: lannisterHouse)
+        let jaime  = Person(name: "Jaime", alias: "El Matarreyes", photo: #imageLiteral(resourceName: "Jaime4.jpg"), house: lannisterHouse)
         lannisterHouse.add(persons: cersei, jaime, jaime, jaime, robb)
         XCTAssertEqual(lannisterHouse.count, 2)
     }
@@ -95,4 +95,16 @@ class HouseTests: XCTestCase {
     func testHouseComparison(){
         XCTAssertLessThan(lannisterHouse, starkHouse)
     }
+    
+    func testHouseReturnSortedArryaOfMembers(){
+        starkHouse.add(persons: robb, arya)
+        XCTAssertEqual(starkHouse.sortedMembers, [arya, robb ])
+        
+    }
 }
+
+
+
+
+
+
